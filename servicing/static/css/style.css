@@ -158,3 +158,8 @@ h5{
   color: white;
   font-family: 'Dancing Script', cursive;
 }
+
+
+.login-bg{
+  background-image: url(../images/img/car.jpg);
+}

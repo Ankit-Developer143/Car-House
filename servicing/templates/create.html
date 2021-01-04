@@ -1,0 +1,22 @@
+{% extends 'base.html'  %}
+{% load static   %}
+{% load crispy_forms_tags %}
+{% block title %}Create{% endblock%}
+{% block body %}
+<div class="container">
+    {% if messages  %}
+        {% for message in messages %}
+        <div class="alert alert-secondary" role="alert">
+            {{message}}
+          </div>
+        {% endfor %}
+        {% endif %}
+<div class="container " style="padding-top: 100px; padding-bottom: 200px;">
+    <h1 style="text-align: center;font-family: 'Yellowtail', cursive;">Fill Data</h1>
+<form method="POST" enctype="multipart/form-data">  
+{% csrf_token %}  
+    {{form| crispy}}
+    <input style="margin-top: 10px;width: 100%;" type="submit" name="submit" value="create"/>
+</form> 
+</div>  
+{% endblock %}
