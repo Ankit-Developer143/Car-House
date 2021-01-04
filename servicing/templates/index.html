@@ -1,0 +1,39 @@
+{% extends 'base.html'  %}
+{% load static %}
+{% block title %}Dashboard{% endblock%}
+{% block body  %}
+   
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+      <h1 style="font-family: 'Dancing Script', cursive">I am Ankit Singh</h1>
+      <p>And I'm a Developer</p>
+      <button class="button"><a style="text-decoration: none;color: inherit;" href="{% url 'main' %}"><span>Click </span></a></button>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <h3>Connect Me</h3>
+        <p>
+          Magna fringilla urna porttitor rhoncus dolor purus. Malesuada bibendum
+          arcu vitae elementum. Purus sit amet volutpat consequat.
+        </p>
+      </div>
+      <div class="column">
+        <h3>Contact</h3>
+        <p>
+          Magna fringilla urna porttitor rhoncus dolor purus. Malesuada bibendum
+          arcu vitae elementum. Purus sit amet volutpat consequat.
+        </p>
+      </div>
+      <div class="column">
+        <h3>About</h3>
+        <p>
+          Magna fringilla urna porttitor rhoncus dolor purus. Malesuada bibendum
+          arcu vitae elementum. Purus sit amet volutpat consequat.
+        </p>
+      </div>
+    </div>
+   
+
+   {% endblock  %}

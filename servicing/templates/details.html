@@ -1,0 +1,51 @@
+{% extends 'base.html'  %}
+{% block title %}details{% endblock%}
+{% block body %}
+<div class="alldetails">
+<img src="{{data.Images.url}}" class="img-fluid" alt="..." style="width: 100%;height: 10%;object-fit: fill;box-shadow: 10px 10px 8px 8px #888888; "/>
+<h1 style="text-align: center;background-color: black;color: white;">{{data.car_model}}</h1>
+
+<table style="background-color: rgba(250, 235, 215, 0.274);">
+    <tr>
+      <th>Title</th>
+      <td>{{data.description}}</td>
+    </tr>
+    <tr>
+      <th>Car-Model</th>
+      <td>{{data.car_model}}</td>
+    </tr>
+    
+    <tr>
+      <th>Car-Owner</th>
+      <td>{{data.car_owner}}</td>
+    </tr>
+    <tr>
+        <th>Car-Number</th>
+        <td>{{data.car_number}}</td>
+      </tr>
+      <tr>
+        <th>Car-Price</th>
+        <td>{{data.car_price}}&nbsp;<span style="color: red;">Lakh</span></td>
+      </tr>
+      <tr>
+        <th>Car-Number</th>
+        <td>{{data.car_number}}</td>
+      </tr>
+      <tr>
+        <th>Car-Notes</th>
+        <td>{{data.car_notes}}</td>
+      </tr>
+      <tr>
+        <th>Year-Old</th>
+        <td>{{data.year_old}}</td>
+      </tr>
+      <tr>
+        <th>Car-Submission Date</th>
+        <td>{{data.submission_data}}</td>
+      </tr>
+  </table>
+</div>
+
+
+
+{% endblock  %}

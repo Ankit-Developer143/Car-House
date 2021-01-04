@@ -1,0 +1,31 @@
+{% extends 'base.html'  %}
+{% load static   %}
+{% block title %}Home{% endblock%}
+{% block body %}
+
+
+  {% for product in allProds %}
+<h5 class="my-4" style="font-size: 20px;" >Model : {{product.0.category}}</h5> 
+  <div class="card-group mr-2 mb-2"> 
+    <!--bootstrap card with 3 horizontal images-->
+    <div class="row"> 
+        {% for cardetails in product %}
+          <div class="card col-md-2" > 
+              <img class="card-img-top" src="{{cardetails.Images.url}}" style="height: 15vw;object-fit: cover; width: 100%;"/> 
+              
+                  <div class="card-body"> 
+                  <h4 class="card-title" style="font-family: 'Satisfy', cursive;">Owner:{{cardetails.car_owner}}</h4> 
+                  
+                  <p class="card-text" style="font-family: 'Josefin Slab', serif;">{{cardetails.car_notes| truncatechars:10}}</p> 
+                  <button type="button" class="btn btn-outline-success text-center"><a style="text-decoration: none;color: inherit;" href="{% url 'cardetails' cardetails.id   %}">More Details</a></button>
+              
+          </div>
+          </div>
+          {% endfor  %}
+      </div>
+    </div>
+    {% endfor  %}
+
+
+{% endblock %}
+

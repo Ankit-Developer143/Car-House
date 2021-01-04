@@ -1,0 +1,160 @@
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-image {
+    /* The image used */
+    background-image: url("../images/img/car2.jpg");
+    /* Full height */
+    height: 90%;
+     /* Add the blur effect */
+     filter: blur(3px);
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: slider 15s infinite linear;
+  }
+
+  @keyframes slider{
+      0%{background-image: url('../images/img/car.jpg');
+
+      }
+      10%{  background-image: url('../images/img/car2.jpg');
+
+      }
+      20%{
+        background-image: url('../images/img/car5.jpg');
+      }
+      35%{ background-image: url('../images/img/car6.jpg');
+
+      }
+      75%{ background-image: url('../images/img/shop.jpg');
+
+      }
+      
+  }
+  
+  /* Position text in the middle of the page/image */
+  .bg-text {
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: aliceblue;
+    border: 2;
+    background-color: rgba(0,0,0, 0.4);
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  .bg-text:hover{
+      background-color: white;
+    transition: all 0.5s ease;
+    border-radius: 10%;
+    transition-timing-function: ease-in;
+    filter: hue-rotate(45deg);
+    color: black;
+    font-weight: 20px;
+
+
+}
+      
+  .bg-image:hover{
+      filter: blur(0px);
+  }
+  .button{
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .columns{
+    width: 100%;
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-align: center;
+    
+}
+.column{
+    
+    background-color: rgba(167, 182, 173, 0.151);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 150px;
+
+}
+
+/* table */
+table {
+  width: 100%
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  
+}
+th,
+td {
+  padding: 30px;
+  text-align: left;
+}
+td,th{
+
+  padding-left: 30px;
+}
+table{
+  padding-top: 50px;
+}
+h5{
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+}
