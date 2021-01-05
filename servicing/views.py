@@ -118,7 +118,21 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('login')
+    
 
+
+def search(request):
+    queryset_list = Car.objects.order_by('description')
+    if 'keywords' in request.GET:
+        keywords = request.GET['keywords']
+        if keywords:
+            queryset_list = queryset_list.filter(car_model__icontains=keywords)
+
+
+    context = {
+        'products':queryset_list
+    }
+    return render(request,'search.html',context)
 
 
 

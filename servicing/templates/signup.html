@@ -11,35 +11,37 @@
           </div>
         {% endfor %}
         {% endif %}
-    <form action="" method="post" class="pt-4">
+        
+    <form action="" method="post" class="pt-4" style="border: solid black; padding: 200px; padding-top: 50px;margin-top: 100px; border-radius: 5%;margin: 20px; background-color: rgba(255, 235, 205, 0.192);">
+        <h1 style="font-family: 'Lobster', cursive;">Signup</h1>
         {% csrf_token %}
         <div class="form-col">
             <div class="form-group col-md-6">
-                <label>First Name</label>
+                <label style="font-family: 'Lobster', cursive;">First Name</label>
                 <input type="text" class="form-control" name="first_name">
             </div>
             <div class="form-group col-md-6">
-                <label>Last Name</label>
+                <label style="font-family: 'Lobster', cursive;">Last Name</label>
                 <input type="text" class="form-control" name="last_name">
             </div>
             <div class="form-group col-md-6">
-                <label>Username</label>
+                <label style="font-family: 'Lobster', cursive;">Username</label>
                 <input type="text" class="form-control" name="username">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
+                <label for="inputEmail4" style="font-family: 'Lobster', cursive;">Email</label>
                 <input type="email" class="form-control" id="inputEmail4" name="email">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
+                <label for="inputPassword4" style="font-family: 'Lobster', cursive;">Password</label>
                 <input type="password" class="form-control" id="inputPassword4" name="password1">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
+                <label for="inputPassword4" style="font-family: 'Lobster', cursive;">Password</label>
                 <input type="password" class="form-control" id="inputPassword4" name="password2">
             </div>
         </div>
-        <button style="margin-top: 20px; " type="submit" class="btn btn-primary ml-3  my-4">signup</button><br>
+        <button style="margin-top: 20px; font-family: 'Lobster', cursive;" type="submit" class="btn btn-primary ml-3  my-4">Signup</button><br>
 
     </form>
     </div>

@@ -7,26 +7,31 @@
     {% if messages  %}
         {% for message in messages %}
         <div class="alert alert-secondary" role="alert">
-            {{message}}
+            <p style="text-align: center;">{{message}}</p>
           </div>
         {% endfor %}
         {% endif %}
-        <div  style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+        
+        
+        <div  style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%); border-radius: 5%; border: solid black; padding: 100px;background-color: black;color: white;">
+          <h1 style="font-family: 'Lobster', cursive;">Login</h1>
             <form action="" method="post" autocomplete="off">
                 {% csrf_token %}
                 <div class="form-group pt-2">
-                  <label>Username</label>
-                  <input type="text" class="form-control" aria-describedby="emailHelp" name = 'username' autocomplete="off" style="width: 500px;"/>
+                  <label style="font-family: 'Lobster', cursive;font-size: 25px;">Username</label>
+                  <input type="text" class="form-control" aria-describedby="emailHelp" name = 'username' autocomplete="off" style="width: 500px;font-family: 'Lobster', cursive; "/>
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" autocomplete="off" style="width: 500px;"/>
+                  <label style="font-family: 'Lobster', cursive; font-size: 25px;">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" autocomplete="off" style="width: 500px;font-family: 'Lobster', cursive;"/>
                 </div>
+                
                 
                 <button type="submit" class="btn btn-success btn-lg btn-block mt-4">Login</button>
               </form>
             </div>
+      
             
 
 
